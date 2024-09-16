@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dev Stack Overflow",
+  title: "Dev Overflow",
   description:
     "Dev Stack Overflow | a community driven platform for developers",
   icons: {
