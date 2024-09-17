@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Dev Stack Overflow | a community driven platform for developers",
   icons: {
-    icon: "/assets/favicon.png",
+    icon: "/assets/images/site-logo.svg",
   },
 };
 
