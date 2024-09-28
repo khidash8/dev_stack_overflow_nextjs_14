@@ -23,8 +23,11 @@ interface Props {
   mongoUserId: string;
 }
 
+const type: any = "create";
+
 export const Question = ({ mongoUserId }: Props) => {
   const editorRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof QuestionsSchema>>({
@@ -209,8 +212,13 @@ export const Question = ({ mongoUserId }: Props) => {
         <Button
           type="submit"
           className="primary-gradient w-fit !text-light-900"
+          disabled={isSubmitting}
         >
-          Ask a Question
+          {isSubmitting ? (
+            <>{type === "edit" ? "Editing..." : "Posting..."}</>
+          ) : (
+            <>{type === "edit" ? "Edit Question" : "Ask a Question"}</>
+          )}
         </Button>
       </form>
     </Form>
